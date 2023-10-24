@@ -2,13 +2,88 @@ import React, { useState, useEffect } from 'react';
 import logo from './wst.jpg';
 import OptionCountry from './OptionCountry';
 
-const Hero = () => {
+const Hero = (props) => {
   const [selectedCountry, setSelectedCountry] = useState('');
-  const [cities, setCities] = useState([]);
+
   useEffect(() => {
-    if (selectedCountry === 'US') {
+    if (selectedCountry === 'JO') {
       console.log(selectedCountry);
+      props.specifyCities([
+        {
+          id: 1,
+          name: "Tunis",
+          country: "Tunisia",
+          info: "Tunis is the capital of Tunisia and known for its historic medina.",
+          image: "https://example.com/tunis.jpg",
+        },
+        {
+          id: 2,
+          name: "Sousse",
+          country: "Tunisia",
+          info: "Sousse is a coastal city known for its beautiful beaches and historical sites.",
+          image: "https://example.com/sousse.jpg",
+        },
+        {
+          id: 3,
+          name: "Djerba",
+          country: "Tunisia",
+          info: "Djerba is an island known for its resorts and cultural attractions.",
+          image: "https://example.com/djerba.jpg",
+        },
+      ])
     }
+    else if(selectedCountry === 'PA'){
+      console.log(selectedCountry);
+      props.specifyCities([
+        {
+          id: 1,
+          name: "Jerusalem",
+          country: "Palestine",
+          info: "Jerusalem is the capital of Palestine and one of the oldest cities in the world.",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfltMcxnFmD60YjNbvlm0iUGYtuJCQHMOa2A&usqp=CAU",
+        },
+        {
+          id: 2,
+          name: "Bethlehem",
+          country: "Palestine",
+          info: "Bethlehem is known for being the birthplace of Jesus and is a significant religious site.",
+          image: "https://adminassets.devops.arabiaweather.com/sites/default/files/field/image/bayt%20lahm.jpg",
+        },
+        {
+          id: 3,
+          name: "Haifa",
+          country: "Palestine",
+          info: "Ramallah is the administrative capital of the Palestinian Authority.",
+          image: "https://www.shutterstock.com/image-photo/haifa-israel-june-17-2018-260nw-1201184029.jpg",
+        },
+      ])    }
+    else if(selectedCountry === 'SR'){
+      console.log(selectedCountry);
+      props.specifyCities([
+        {
+          id: 1,
+          name: "Damascus",
+          country: "Syria",
+          info: "Damascus is one of the oldest continuously inhabited cities in the world.",
+          image: "https://cdn.britannica.com/91/177991-050-D8667CD8/Umayyad-Mosque-Damascus.jpg",
+        },
+        {
+          id: 2,
+          name: "Aleppo",
+          country: "Syria",
+          info: "Aleppo is known for its rich history and cultural significance.",
+          image: "https://static01.nyt.com/images/2012/08/16/arts/CITADEL-JP1/CITADEL-JP1-superJumbo.jpg",
+        },
+        {
+          id: 3,
+          name: "Homs",
+          country: "Syria",
+          info: "Homs is an ancient city with a diverse cultural heritage.",
+          image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/21/74/ce/filename-habebe-12810711874.jpg?w=600&h=400&s=1",
+        },
+      ])
+
+  }
   }, [selectedCountry]);
   
   return (

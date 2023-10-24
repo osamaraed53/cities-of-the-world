@@ -10,10 +10,6 @@ const OptionCountry = ({ onCountryChange }) => {
   
     return (
     <div>
-
-
-
-
 <label
     htmlFor="countries"
     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -28,7 +24,7 @@ const OptionCountry = ({ onCountryChange }) => {
     <option value="">Choose a country</option>
     <option value="PA">Palestine</option>
     <option value="JO">Jordan</option>
-    <option value="US">United States</option>
+    <option value="SR">Syria</option>
     {/* <option value="">Germany</option> */}
   </select>
     </div>
