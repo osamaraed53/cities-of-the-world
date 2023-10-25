@@ -4,7 +4,9 @@ import Navbar from './Nav';
 import Hero from './Hero';
 import ListOfCards from './ListOfCards';
 import Footer from './footer';
-
+import {BrowserRouter as Router ,Routes , Route } from 'react-router-dom'
+import Contact from './Contact';
+import About from './About';
 
 function App() {
   const [cities, setCities] = useState([]);
@@ -12,7 +14,29 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar/>
+      
+      <Router>
+        <Navbar/>
+          <Routes>
+            <Route path='/' element={<Hero
+            specifyCities = {setCities}/>}>  </Route>
+          <Route path='/about' element={<About/>}></Route>
+          <Route path='/contact' element={<Contact/>}></Route>
+          <Route path='/cards' element={<ListOfCards cities = {cities}/>}></Route>
+          </Routes>
+      </Router>
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      {/* <Navbar/>
       <Hero 
         specifyCities = {setCities}
       />
@@ -21,7 +45,7 @@ function App() {
 
       <ListOfCards 
       cities = {cities}
-      />
+      /> */}
 
       <Footer/>
       

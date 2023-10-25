@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
     const [isNavVisible, setNavVisible] = useState(false);
@@ -63,53 +64,53 @@ const Navbar = () => {
           className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
           data-te-nav-item-ref=""
         >
-          <a
+          <Link
             className="text-white transition duration-200 hover:text-white hover:ease-in-out focus:text-white disabled:text-black/30 motion-reduce:transition-none dark:text-white-200 dark:hover:text-white-400 dark:focus:text-white-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-white-400"
             aria-current="page"
-            href="#"
+            to='/'
             data-te-nav-link-ref=""
           >
             Home
-          </a>
+          </Link>
         </li>
         {/* Features link */}
         <li
           className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
           data-te-nav-item-ref=""
         >
-          <a
+          <Link
             className="p-0 text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-            href="#"
+            to='/cards'
             data-te-nav-link-ref=""
           >
-            Features
-          </a>
+            cards
+          </Link>
         </li>
         {/* Pricing link */}
         <li
           className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
           data-te-nav-item-ref=""
         >
-          <a
+          <Link
             className="p-0 text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-            href="#"
+            to='/about'
             data-te-nav-link-ref=""
           >
-            Pricing
-          </a>
+            About
+          </Link>
         </li>
         {/* About link */}
         <li
           className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
           data-te-nav-item-ref=""
         >
-          <a
+          <Link
             className="p-0 text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-            href="#"
+            to='/contact'
             data-te-nav-link-ref=""
           >
-            About
-          </a>
+            Contact
+          </Link>
         </li>
       </ul>
     </div>
